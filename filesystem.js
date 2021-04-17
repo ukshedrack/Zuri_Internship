@@ -7,10 +7,10 @@ function userData(){
         return response.json();
     })
     .then(function (data) { 
-        fs.mkdir('Fake_Rest_API', function(err){
+        fs.mkdir('result', function(err){
             if (err) throw err;
             console.log('Directory successfully created');
-            fs.writeFile('./Fake_Rest_API/posts.json', JSON.stringify(data), function(err){
+            fs.writeFile('./result/posts.json', JSON.stringify(data), function(err){
                 if (err) throw err;
                 console.log('File saved');
             });
